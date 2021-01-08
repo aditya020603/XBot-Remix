@@ -27,11 +27,11 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    "`#AFK\n Maaf Boss Saya Sedang OFFLINE!!`",
-    "`#AFK\n Maaf Boss Saya Sedang OFFLINE\n Tolong Jangan Ganggu Saya!!",
-    "`#AFK\n Saya Sedang OFFLINE\n Jangan Ganggu Saya !!!!!`",
-    "`#AFK\n Maaf Boss Saya Sedang OFFLINE!!`",
-    "`#AFK\n Saya Sedang OFFLINE ANJING !!!!!`",
+    "`#AFK\n Gua lagi off!!! 
+    "`#AFK\n Gosah bacot gua lagu off!!! 
+    "`#AFK\n Bacot gua lagi off anjing!!! 
+    "`#AFK\n BANGSAT UDAH GUA BILANG LAGI OFF!!! 
+    "`#AFK\n MATI AJH LU BANGSAT!!! 
 ]
 
 global USER_AFK  # pylint:disable=E0602
@@ -68,11 +68,11 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit("**AFK!**\nSaya Offline Dulu Guys...")
+        await afk_e.edit("**AFK!**\nOFF MAU KENTU...")
     else:
-        await afk_e.edit("**AFK!**\nSaya Offline Dulu Guys...")
+        await afk_e.edit("**AFK!**\nOFF MAU KENTU...")
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nKamu Sekarang AFK!")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYOU LOOK SO BEAUTIFUL!")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -97,7 +97,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.edit("**OK Saya Kembali....!**")
+        msg = await notafk.edit("**I'M BACKK BICCTTHH....!**")
         time.sleep(3)
         await msg.delete()
         if BOTLOG:
@@ -112,7 +112,7 @@ async def type_afk_is_not_true(notafk):
                 await notafk.client.send_message(
                     BOTLOG_CHATID,
                     "[" + name0 + "](tg://user?id=" + str(i) + ")" +
-                    " Mengirim " + "`" + str(USERS[i]) + " Pesan Untukmu`",
+                    " Mengirim " + "`" + str(USERS[i]) + " Massage`",
                 )
         COUNT_MSG = 0
         USERS = {}
@@ -239,7 +239,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)}dtk`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"Maaf Saya Sedang **OFFLINE** Sekarang \nKarena: **{AFKREASON}** \
+                    await sender.reply(f* sorry gua Sedang **OFFLINE** Sekarang \nKarena: **{AFKREASON}** \
                         \nSejak **{afk_since}** Yg Lalu")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -248,7 +248,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"**Maaf Saya Sedang **OFFLINE** Sekarang \nKarena: **{AFKREASON}** \
+                        await sender.reply(f"**sorry gua Sedang **OFFLINE** Sekarang \nKarena: **{AFKREASON}** \
                         \nSejak **{afk_since}** Yg Lalu")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
