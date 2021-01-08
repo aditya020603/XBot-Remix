@@ -27,11 +27,11 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    "`#AFK\n Maaf Boss Saya Sedang OFFLINE!!`",
-    "`#AFK\n Maaf Boss Saya Sedang OFFLINE\n Tolong Jangan Ganggu Saya!!",
-    "`#AFK\n Saya Sedang OFFLINE\n Jangan Ganggu Saya !!!!!`",
-    "`#AFK\n Maaf Boss Saya Sedang OFFLINE!!`",
-    "`#AFK\n Saya Sedang OFFLINE ANJING !!!!!`",
+    "`#AFK\n Gua lagi off!!! 
+    "`#AFK\n Gosah bacot gua lagi off!!! 
+    "`#AFK\n Bacot gua lagi off anjing!!! 
+    "`#AFK\n Batu bat anjing!!! 
+    "`#AFK\n Mati ajh lu sono bangsat!!! 
 ]
 
 global USER_AFK  # pylint:disable=E0602
